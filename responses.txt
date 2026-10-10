@@ -5,3 +5,6 @@ Part 2:
 I chose decimal comparisons to check that converting exact fraction coefficients to decimals gives results accurate enough for the selected precision. Testing several precision settings checks whether the converted coefficients remain within the corresponding tolerance, which is useful to test that the conversion is not introducing large amounts of error.
 Part 3:
 If one uses separate files like Frank says, then there's no need to resolve merge conflicts since combining changes that don't edit the same files is easy since every change from both branches can just be accepted.
+
+Part 4:
+At part4, polynomial coefficients are Decimal values, matching the quadrature code. Merging into main brings Iris's Fraction coefficients (commit 9e5941d), but quadrature passes them to decimal-based root finding without conversion. The tests then fail because Decimal/Fraction arithmetic is incompatible and Fraction has no .sqrt() method.
