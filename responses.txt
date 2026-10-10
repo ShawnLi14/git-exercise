@@ -1,0 +1,2 @@
+Part 2:
+I chose decimal comparisons to check that converting exact fraction coefficients to decimals gives results accurate enough for the selected precision. Testing several precision settings checks whether the converted coefficients remain within the corresponding tolerance, which is useful to test that the conversion is not introducing large amounts of error.
